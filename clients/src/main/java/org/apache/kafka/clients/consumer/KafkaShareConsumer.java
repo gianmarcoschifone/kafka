@@ -326,7 +326,7 @@ import static org.apache.kafka.common.utils.Utils.propsToMap;
  * exceeds the acquisition lock duration. Consumers which use renewal acknowledgements can impact the delivery
  * progress of the share group. If the leadership of the partition for a record being delivered changes or the
  * application's connection to the leader broker is disconnected, the current delivery attempt ends.
-
+ *
  * <h3><a name="multithreaded">Multithreaded Processing</a></h3>
  * The consumer is NOT thread-safe. It is the responsibility of the user to ensure that multithreaded access
  * is properly synchronized. Unsynchronized access will result in {@link java.util.ConcurrentModificationException}.
@@ -345,7 +345,7 @@ import static org.apache.kafka.common.utils.Utils.propsToMap;
  *       this.consumer = consumer;
  *     }
  *
- *     {@literal}@Override
+ *     {@literal @Override}
  *     public void run() {
  *         try {
  *             consumer.subscribe(Arrays.asList("topic"));
