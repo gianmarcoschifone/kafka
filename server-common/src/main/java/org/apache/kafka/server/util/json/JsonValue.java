@@ -28,14 +28,14 @@ import java.util.Optional;
  * class.
  * <br>
  * Typical usage would be something like:
- * <pre><code>
+ * <pre>{@code
  * // Given a jsonNode containing a parsed JSON:
  * JsonObject jsonObject = JsonValue.apply(jsonNode).asJsonObject();
  * Integer intField = jsonObject.apply("int_field").to(new DecodeJson.DecodeInteger());
  * Optional<Integer> optionLongField = jsonObject.apply("option_long_field").to(DecodeJson.decodeOptional(new DecodeJson.DecodeInteger()));
  * Map<String, Integer> mapStringIntField = jsonObject.apply("map_string_int_field").to(DecodeJson.decodeMap(new DecodeJson.DecodeInteger()));
  * List<String> seqStringField = jsonObject.apply("seq_string_field").to(DecodeJson.decodeList(new DecodeJson.DecodeString()));
- * </code></pre>
+ * </pre>
  * The {@code to} method throws an exception if the value cannot be converted to the requested type.
  */
 
