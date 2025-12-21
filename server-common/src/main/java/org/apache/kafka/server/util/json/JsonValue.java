@@ -24,7 +24,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import java.util.Optional;
 
 /**
- * A simple wrapper over Jackson's JsonNode that enables type safe parsing via the `DecodeJson` type
+ * A simple wrapper over Jackson's JsonNode that enables type safe parsing via the {@code DecodeJson} type
  * class.
  * <br>
  * Typical usage would be something like:
@@ -36,7 +36,7 @@ import java.util.Optional;
  * Map<String, Integer> mapStringIntField = jsonObject.apply("map_string_int_field").to(DecodeJson.decodeMap(new DecodeJson.DecodeInteger()));
  * List<String> seqStringField = jsonObject.apply("seq_string_field").to(DecodeJson.decodeList(new DecodeJson.DecodeString()));
  * </code></pre>
- * The `to` method throws an exception if the value cannot be converted to the requested type.
+ * The {@code to} method throws an exception if the value cannot be converted to the requested type.
  */
 
 public interface JsonValue {

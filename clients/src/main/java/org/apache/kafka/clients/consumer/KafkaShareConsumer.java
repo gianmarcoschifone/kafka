@@ -248,7 +248,7 @@ import static org.apache.kafka.common.utils.Utils.propsToMap;
  * information to Kafka.
  *
  * <h3>Reading Transactional Records</h3>
- * The way that share groups handle transactional records is controlled by the {@code group.share.isolation.level}</code>
+ * The way that share groups handle transactional records is controlled by the {@code group.share.isolation.level}
  * configuration property. In a share group, the isolation level applies to the entire share group, not just individual
  * consumers.
  * <p>
