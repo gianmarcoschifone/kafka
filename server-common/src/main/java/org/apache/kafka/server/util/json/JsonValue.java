@@ -24,19 +24,19 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import java.util.Optional;
 
 /**
- * A simple wrapper over Jackson's JsonNode that enables type safe parsing via the `DecodeJson` type
+ * A simple wrapper over Jackson's JsonNode that enables type safe parsing via the {@code DecodeJson} type
  * class.
  * <br>
  * Typical usage would be something like:
- * <pre><code>
+ * <pre>{@code
  * // Given a jsonNode containing a parsed JSON:
  * JsonObject jsonObject = JsonValue.apply(jsonNode).asJsonObject();
  * Integer intField = jsonObject.apply("int_field").to(new DecodeJson.DecodeInteger());
  * Optional<Integer> optionLongField = jsonObject.apply("option_long_field").to(DecodeJson.decodeOptional(new DecodeJson.DecodeInteger()));
  * Map<String, Integer> mapStringIntField = jsonObject.apply("map_string_int_field").to(DecodeJson.decodeMap(new DecodeJson.DecodeInteger()));
  * List<String> seqStringField = jsonObject.apply("seq_string_field").to(DecodeJson.decodeList(new DecodeJson.DecodeString()));
- * </code></pre>
- * The `to` method throws an exception if the value cannot be converted to the requested type.
+ * }</pre>
+ * The {@code to} method throws an exception if the value cannot be converted to the requested type.
  */
 
 public interface JsonValue {
@@ -55,7 +55,8 @@ public interface JsonValue {
     }
 
     /**
-     * If this is a JSON object, return a JsonObject wrapped by an `Optional`. Otherwise, return Empty.
+     * If this is a JSON object, return a JsonObject wrapped by an {@code Optional}. Otherwise, return
+     * {@code Optional.empty()}.
      */
     default Optional<JsonObject> asJsonObjectOptional() {
         if (this instanceof JsonObject) {
@@ -77,7 +78,8 @@ public interface JsonValue {
     }
 
     /**
-     * If this is a JSON array, return a JsonArray wrapped by an `Optional`. Otherwise, return Empty.
+     * If this is a JSON array, return a JsonArray wrapped by an {@code Optional}. Otherwise, return
+     * {@code Optional.empty()}.
      */
     default Optional<JsonArray> asJsonArrayOptional() {
         if (this instanceof JsonArray) {
