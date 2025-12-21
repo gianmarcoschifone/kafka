@@ -35,7 +35,7 @@ import java.util.Optional;
  * Optional<Integer> optionLongField = jsonObject.apply("option_long_field").to(DecodeJson.decodeOptional(new DecodeJson.DecodeInteger()));
  * Map<String, Integer> mapStringIntField = jsonObject.apply("map_string_int_field").to(DecodeJson.decodeMap(new DecodeJson.DecodeInteger()));
  * List<String> seqStringField = jsonObject.apply("seq_string_field").to(DecodeJson.decodeList(new DecodeJson.DecodeString()));
- * }</pre>
+ * </pre>
  * The {@code to} method throws an exception if the value cannot be converted to the requested type.
  */
 
